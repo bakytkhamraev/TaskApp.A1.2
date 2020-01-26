@@ -24,6 +24,8 @@ import static android.content.Context.MODE_PRIVATE;
  */
 public class BoardFragment extends Fragment {
 
+    private BoardFragment boardFragment;
+
 
     public BoardFragment() {
         // Required empty public constructor
@@ -41,20 +43,26 @@ public class BoardFragment extends Fragment {
         Button button = view.findViewById(R.id.button);
 
 
+
         switch (pos) {
             case 0:
                 textView.setText("Привет Данияр");
                 imageView.setImageResource(R.drawable.onboard_page1);
                 button.setVisibility(View.INVISIBLE);
+                view.setBackgroundResource(R.drawable.onboard_page2);
+
+
                 break;
             case 1:
                 textView.setText("Как дела Данияр");
                 imageView.setImageResource(R.drawable.onboard_page2);
+                view.setBackgroundResource(R.drawable.onboard_page3);
                 button.setVisibility(View.INVISIBLE);
                 break;
             case 2:
                 textView.setText("Что делаешь Данияр");
                 imageView.setImageResource(R.drawable.onboard_page3);
+                view.setBackgroundResource(R.drawable.onboard_page1);;
                 button.setVisibility(View.VISIBLE);
                 break;
         }
