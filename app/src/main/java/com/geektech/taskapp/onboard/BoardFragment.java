@@ -22,10 +22,10 @@ import static android.content.Context.MODE_PRIVATE;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class OnBoardFragment extends Fragment {
+public class BoardFragment extends Fragment {
 
 
-    public OnBoardFragment() {
+    public BoardFragment() {
         // Required empty public constructor
     }
 
@@ -37,8 +37,8 @@ public class OnBoardFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_on_board, container, false);
         int pos = getArguments().getInt("pos");
         TextView textView = view.findViewById(R.id.textView);
-        ImageView imageView=view.findViewById(R.id.imageView);
-        Button button=view.findViewById(R.id.button);
+        ImageView imageView = view.findViewById(R.id.imageView);
+        Button button = view.findViewById(R.id.button);
 
 
         switch (pos) {
@@ -62,7 +62,7 @@ public class OnBoardFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferences preferences=getActivity().getSharedPreferences("setting", MODE_PRIVATE);
+                SharedPreferences preferences = getActivity().getSharedPreferences("setting", MODE_PRIVATE);
                 preferences.edit().putBoolean("isShown", true).apply();
                 startActivity(new Intent(getContext(), MainActivity.class));
                 getActivity().finish();

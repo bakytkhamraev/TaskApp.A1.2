@@ -33,10 +33,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         SharedPreferences preferences=getSharedPreferences("setting", MODE_PRIVATE);
-
-
         boolean inShown=preferences.getBoolean("isShown", false);
-        if (true){
+
+        if (!inShown){
             startActivity(new Intent(this, OnBoardActivity.class));
             finish();
             return;

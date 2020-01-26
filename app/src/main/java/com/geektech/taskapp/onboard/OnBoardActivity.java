@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
-import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
@@ -33,9 +32,9 @@ public class OnBoardActivity extends AppCompatActivity {
         @NonNull
         @Override
         public Fragment getItem(int position) {
-            OnBoardFragment fragment = new OnBoardFragment();
+            BoardFragment fragment = new BoardFragment();
             Bundle bundle = new Bundle();
-            bundle.putInt("pas", position);
+            bundle.putInt("pos", position);
             fragment.setArguments(bundle);
 
             return fragment;
