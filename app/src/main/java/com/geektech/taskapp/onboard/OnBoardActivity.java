@@ -10,6 +10,8 @@ import androidx.viewpager.widget.ViewPager;
 import android.os.Bundle;
 
 import com.geektech.taskapp.R;
+import com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator;
+import com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator;
 
 public class OnBoardActivity extends AppCompatActivity {
 
@@ -21,6 +23,9 @@ public class OnBoardActivity extends AppCompatActivity {
         SectionPagerAdapter adapter = new SectionPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(adapter);
 
+
+        WormDotsIndicator wormDotsIndicator = (WormDotsIndicator) findViewById(R.id.worm_dots_indicator);
+        wormDotsIndicator.setViewPager(viewPager);
     }
 
     public class SectionPagerAdapter extends FragmentPagerAdapter {

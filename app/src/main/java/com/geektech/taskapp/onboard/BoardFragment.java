@@ -43,7 +43,6 @@ public class BoardFragment extends Fragment {
         Button button = view.findViewById(R.id.button);
 
 
-
         switch (pos) {
             case 0:
                 textView.setText("Привет Данияр");
@@ -62,7 +61,8 @@ public class BoardFragment extends Fragment {
             case 2:
                 textView.setText("Что делаешь Данияр");
                 imageView.setImageResource(R.drawable.onboard_page3);
-                view.setBackgroundResource(R.drawable.onboard_page1);;
+                view.setBackgroundResource(R.drawable.onboard_page1);
+                ;
                 button.setVisibility(View.VISIBLE);
                 break;
         }

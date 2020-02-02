@@ -19,4 +19,19 @@
         android:text="sign"
         android:textColor="#FFFF"/>
 
+    <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="130dp"
+        android:id="@+id/worm_dots_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:dotsColor="#ff0000"
+        app:dotsStrokeColor="#000000"
+        app:dotsCornerRadius="8dp"
+        app:dotsSize="16dp"
+        app:dotsSpacing="4dp"
+        app:dotsStrokeWidth="2dp"
+        />
+
+
 </RelativeLayout>
